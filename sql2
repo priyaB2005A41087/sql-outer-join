@@ -1,0 +1,11 @@
+---->outer join(to combain outer join we use left join 
+and right join and then union operation)
+
+
+ select * from employee;
+ 
+ select e.empid,e.empname,p.project_name,p.project_manager
+ from employee e left join project p on e.empid=p.empid
+ union
+ select e.empid,e.empname,p.project_name,p.project_manager
+ from employee e right join project p on e.empid=p.empid;
